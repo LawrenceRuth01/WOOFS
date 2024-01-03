@@ -1,14 +1,15 @@
 <?php
-$host='localhost'
+$host='localhost';
 $username='root';
 $password='';
-$database='woofsdb'
+$database='woofsdb';
 
 $conn= new mysqli($host,$username,$password,$database);
 
 if ($conn->connect_error) {
-	die('Connection failed: '.$conn->connect_error)
-}else {
+	die('Connection failed: '.$conn->connect_error);
+}
+else {
 	echo "Connection successful";
 }
 ?>

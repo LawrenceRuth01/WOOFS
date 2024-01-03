@@ -1,8 +1,9 @@
 <?php
+session_start();
 require 'connect.php';
 if (isset($_POST['submit'])) {
-	$username=$_POST['username']
-	$password=$_POST['password']
+	$username=$_POST['username'];
+	$password=$_POST['password'];
 
 	if (empty($name)|| empty($password)) {
 		$error="Please enter both username and password"; 
@@ -25,7 +26,9 @@ if (isset($_POST['submit'])) {
             	
             } else {
             	$error="Invalid password.";
-            } else {
+            }
+            } 
+            else {
             	$error="Invalid username.";
 
             }
@@ -54,11 +57,11 @@ if (isset($_POST['submit'])) {
 	 } 
 	?>
 
-	<form method="post" action="login.php">
+	<form method="post" action="Login.php">
 		<label for="username">Username:</label>
 		<input type="text" name="username" required>
 		<label for="password"> Password:</label>
-		<input type="password" name="password">
+		<input type="password" name="password"><br>
 
 		<button type="submit">Login</button>
 
